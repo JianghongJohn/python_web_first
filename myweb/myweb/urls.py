@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from myapp import views # 导入views
 from myapp import hellodb # 导入db
-
+from myapp import search
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', views.index),   # 添加views.index
     path('hello', views.hello),   
     path('testdb', hellodb.testdb),
-    path('querydb', hellodb.querydb)   
+    path('querydb', hellodb.querydb),
+    path('search-form', search.search_form),
+    path('search', search.search),
 ]
 
